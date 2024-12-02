@@ -56,6 +56,15 @@ package com.jakubwawak.maintanance;
          }
          return null;
      }
+
+     /**
+      * Function for getting long value from properties file
+      * @param key
+      * @return long
+      */
+     public long getLongValue(String key){
+         return Long.parseLong(getValue(key));
+     }
  
      /**
       * Function for parsing properties file

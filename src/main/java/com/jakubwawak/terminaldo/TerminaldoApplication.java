@@ -20,7 +20,7 @@ import com.vaadin.flow.spring.annotation.EnableVaadin;
 public class TerminaldoApplication {
 
 	public static final String version = "0.0.1";
-	public static final String build = "todo26112024REV1";
+	public static final String build = "todo02122024REV1";
 
 	public static Properties properties;
 	public static Database database;

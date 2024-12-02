@@ -55,6 +55,38 @@ public class DatabaseUser {
     }
 
     /**
+     * Function for login user
+     * @param email
+     * @param password
+     * @return int
+     *         0 - user not found
+     *         1 - user found and password is correct
+     *         2 - user found and password is incorrect
+     *         -1 - error
+     */
+    public int loginUser(String email, String password){
+        try {
+            MongoCollection<Document> collection = database.getCollection("users");
+            Document query = new Document("email", email);
+            Document result = collection.find(query).first();
+            if (result != null) {
+                TLDUser user = new TLDUser(result);
+                if ( user.validatePassword(password) ){
+                    return 1;
+                } else {
+                    return 2;
+                }
+            } else {
+                return 0;
+            }
+        } catch (Exception e) {
+            TerminaldoApplication.database.log("USER-LOGIN-DATABASE", "User login failed");
+            return -1;
+        }
+    }
+
+
+    /**
      * Function for checking if user exists in database
      * 
      * @param user

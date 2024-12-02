@@ -41,7 +41,7 @@ public class LoginEndpoint {
             if (payload.containsKey("email") && payload.containsKey("password")) {
                 String email = (String) payload.get("email");
                 String password = (String) payload.get("password");
-
+                // TODO login user logic and return token
             } else {
                 response.status = "error";
                 response.status_code = "400";
