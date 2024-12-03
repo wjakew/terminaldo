@@ -11,12 +11,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.jakubwawak.database.Database;
 import com.jakubwawak.maintanance.Properties;
 import com.vaadin.flow.spring.annotation.EnableVaadin;
+import com.vaadin.flow.theme.Theme;
 
 /**
  * Main class for Terminaldo application
  */
 @SpringBootApplication
-@EnableVaadin({"com.jakubwawak"})
+@EnableVaadin({"com.jakubwawak.server.website"})
+@Theme(value = "terminaldotheme")
 public class TerminaldoApplication {
 
 	public static final String version = "0.0.1";

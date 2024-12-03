@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jakubwawak.database.DatabaseUser;
 import com.jakubwawak.entity.TLDUser;
 import com.jakubwawak.server.Response;
-import com.jakubwawak.terminaldo.TerminaldoApplication;
 
 /**
  * Endpoint for user management

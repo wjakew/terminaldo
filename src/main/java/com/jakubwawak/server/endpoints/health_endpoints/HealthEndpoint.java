@@ -17,7 +17,7 @@ import com.jakubwawak.server.Response;
  * Object for health check endpoint
  */
 @RestController
-@RequestMapping("/health")
+@RequestMapping("/api/v1/health")
 public class HealthEndpoint {
     
 

@@ -1,0 +1,19 @@
+meta {
+  name: API Health
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8080/api/v1/health
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+  "email": "example@example.com",
+  "telephone": "1234567890",
+  "password": "password"
+  }
+}
