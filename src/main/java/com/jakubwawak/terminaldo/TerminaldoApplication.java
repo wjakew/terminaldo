@@ -22,7 +22,7 @@ import com.vaadin.flow.theme.Theme;
 public class TerminaldoApplication {
 
 	public static final String version = "0.0.1";
-	public static final String build = "todo02122024REV1";
+	public static final String build = "todo04122024REV1";
 
 	public static Properties properties;
 	public static Database database;
